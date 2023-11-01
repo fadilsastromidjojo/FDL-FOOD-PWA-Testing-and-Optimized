@@ -1,0 +1,281 @@
+:root {
+  --main-color: #1ddeaa;
+  --hvr-color: #4d9685;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #1ddeaa;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar-menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar-logo h1 {
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 44px;
+}
+
+.app-bar .app-bar-logo h1:hover {
+  text-decoration: none;
+  color: var(--hvr-color);
+  transition-delay: 0.1s;
+}
+
+.app-bar .app-bar-nav {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+
+.app-bar .app-bar-nav.open {
+  left: 0;
+}
+
+.app-bar .app-bar-nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-bar .app-bar-nav a {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.app-bar .app-bar-nav ul li a:hover {
+  text-decoration: none;
+  color: var(--hvr-color);
+  transition-delay: 0.1s;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url('/images/hero-image.jpg');
+}
+
+.hero-inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 36px;
+  text-shadow: 1px 2px var(--hvr-color);
+}
+
+.hero-tagline {
+  color: #fff;
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 1px 1px #141414;
+}
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content-heading {
+  font-weight: normal;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item-header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item-header .restaurant-item-header-poster {
+  width: 100%;
+}
+
+.restaurant-item .restaurant-item-header .restaurant-item-header-rating {
+  position: absolute;
+  padding: 10px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.restaurant-item .restaurant-item-header .restaurant-item-header-rating .restaurant-item-header-rating-score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item-content {
+  padding: 16px;
+}
+
+.restaurant-item .restaurant-item-content h3 {
+  margin: 0 0 10px 0;
+}
+
+.restaurant-item .restaurant-item-content h3 a {
+  color: var(--main-color);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.restaurant-item .restaurant-item-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant .restaurant-poster {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.restaurant .restaurant-info h4 {
+  margin: 8px 0;
+}
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer p a {
+  text-decoration: none;
+  color: white;
+  padding: 44px 0;
+}
+
+footer a:hover {
+  color: var(--hvr-color);
+  transition-delay: 0.1s;
+}

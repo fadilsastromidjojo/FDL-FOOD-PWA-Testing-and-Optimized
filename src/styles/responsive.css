@@ -1,0 +1,104 @@
+@media screen and (min-width: 400px) {
+    .hero {
+      min-height: 350px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .hero {
+      background-image: url('/images/hero-image.jpg');
+    }
+  }
+  
+  @media screen and (min-width: 650px) {
+    .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
+    }
+  
+    .app-bar .app-bar-logo h1 {
+      font-size: 1.5em;
+    }
+  
+    .app-bar .app-bar-menu {
+      display: none;
+    }
+  
+    .app-bar .app-bar-nav {
+      position: static;
+      width: 100%;
+    }
+  
+    .app-bar .app-bar-nav ul li {
+      display: inline-block;
+    }
+  
+    .app-bar .app-bar-nav ul li a {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      margin: 0;
+    }
+  
+    .hero {
+      min-height: 380px;
+    }
+  
+    .restaurants {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .restaurant {
+      grid-template-columns: auto 1fr;
+    }
+  
+    .restaurant .restaurant-name {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  
+    .restaurant .restaurant-description {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    .app-bar .app-bar-brand h1 {
+      font-size: 2em;
+    }
+  
+    .hero {
+      min-height: 400px;
+    }
+  }
+  
+  @media screen and (min-width: 850px) {
+    .restaurants {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .hero {
+      min-height: 420px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .restaurants {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .hero {
+      min-height: 450px;
+    }
+  }
+  
+  @media screen and (min-width: 1600px) {
+    .restaurants {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  
+    .hero {
+      min-height: 480px;
+    }
+  }
