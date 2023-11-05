@@ -48,7 +48,7 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'server',
-      analyzerPort: 0,
+      analyzerPort: 8888,
       generateStatsFile: true,
       statsOptions: { source: false },
     }),

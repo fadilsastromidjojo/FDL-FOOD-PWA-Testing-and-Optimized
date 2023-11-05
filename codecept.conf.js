@@ -10,7 +10,7 @@ const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
     output: 'e2e/outputs',
     helpers: {
       Puppeteer: {
-        url: 'http://127.0.0.1:8080',
+        url: 'http://localhost:8080/',
         show: true,
         windowSize: '1200x900',
       },

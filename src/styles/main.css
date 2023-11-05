@@ -208,8 +208,11 @@ main {
 
 .restaurant-item .restaurant-item-content h3 a {
   color: var(--main-color);
+  display: inline-block;
   text-decoration: none;
   padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .restaurant-item .restaurant-item-content p {

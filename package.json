@@ -63,6 +63,7 @@
     "serviceworker-webpack-plugin": "^1.0.1",
     "sweetalert2": "^10.16.7",
     "terser": "^5.0.0",
+    "vercel": "^32.5.0",
     "workbox-core": "^6.1.5",
     "workbox-expiration": "^6.1.5",
     "workbox-precaching": "^6.1.5",

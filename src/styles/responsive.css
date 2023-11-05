@@ -6,7 +6,7 @@
   
   @media screen and (max-width: 600px) {
     .hero {
-      background-image: url('/images/hero-image.jpg');
+      background-image: url('/images/hero-image-small.jpg');
     }
   }
   

@@ -2,7 +2,9 @@ import CONFIG from '../config/config';
 
 const createRestaurantDetail = (restaurant) => `
 <h2 class="restaurant-name">${restaurant.name}</h2>
-<img loading="lazy" class="restaurant-poster" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+<img loading="lazy" class="restaurant-poster" crossorigin="anonymous" src="${
+  CONFIG.BASE_IMAGE_URL + restaurant.pictureId
+}" alt="${restaurant.name}" />
 <div class="restaurant-info">
 <h3>Information</h3>
   <h4>Address</h4>
@@ -22,21 +24,29 @@ const createRestaurantDetail = (restaurant) => `
 </div>
 <div class="restaurant-description">
 <h3>Customer Reviews</h3>
-<p>${restaurant.customerReviews.map((customer) => customer.review).join(' | ')}</p>
+<p>${restaurant.customerReviews
+  .map((customer) => customer.review)
+  .join(' | ')}</p>
 </div>
 `;
 
 const createRestaurantItem = (restaurant) => `
 <div class="restaurant-item">
   <div class="restaurant-item-header">
-      <img loading="lazy" class="restaurant-item-header-poster" alt="${restaurant.name}" crossorigin="anonymous"
+      <img loading="lazy" class="restaurant-item-header-poster" alt="${
+        restaurant.name
+      }" crossorigin="anonymous"
       src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
       <div class="restaurant-item-header-rating">
-          <p>⭐️<span class="restaurant-item-header-rating-score">${restaurant.rating} - ${restaurant.city}</span></p>
+          <p>⭐️<span class="restaurant-item-header-rating-score">${
+            restaurant.rating
+          } - ${restaurant.city}</span></p>
       </div>
   </div>
   <div class="restaurant-item-content">
-      <h3 class="restaurant-name"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
+      <h3 class="restaurant-name"><a href="${`/#/detail/${restaurant.id}`}">${
+  restaurant.name
+}</a></h3>
       <p>${restaurant.description}</p>
   </div>
 </div>
@@ -55,8 +65,8 @@ const createLikedButton = () => `
 `;
 
 export {
-createRestaurantItem,
-createRestaurantDetail,
-createLikeButton,
-createLikedButton,
+  createRestaurantItem,
+  createRestaurantDetail,
+  createLikeButton,
+  createLikedButton,
 };

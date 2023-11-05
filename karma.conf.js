@@ -6,13 +6,13 @@ module.exports = function (config) {
       frameworks: ['jasmine'],
 
       files: [
-        'specs/**/*Spec.js',
+        'specs/**/*spec.js',
       ],
 
       exclude: [],
 
       preprocessors: {
-        'specs/**/*Spec.js': ['webpack', 'sourcemap'],
+        'specs/**/*spec.js': ['webpack', 'sourcemap'],
       },
 
       webpack: {
